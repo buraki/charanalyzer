@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Character Analyzer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1DB954, #191414);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .spotify-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background: #1DB954;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .spotify-button:hover {
+            background: #17a44a;
+        }
+
+        .share-buttons {
+            margin-top: 2rem;
+        }
+
+        .share-button {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .share-button.instagram {
+            background: #E4405F;
+        }
+
+        .share-button:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .spotify-button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .share-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .login-button:hover {
+            background-color: #1ed760;
+        }
+
+        .login-button {
+            background-color: #7c0909;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPageUrl = encodeURIComponent(window.location.href);
+
+            // Update Instagram share link
+            document.querySelector(".share-button.instagram").href = `https://www.instagram.com/create/story/?media=${currentPageUrl}`;
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Here's what we've found about you:</h1>
+        <p>
+            {{ analysis }}
+        </p>
+
+        <a class="login-button" href="/">Cool</a>
+
+        <div class="share-buttons">
+            <a class="share-button instagram" href="#" target="_blank">Share on Instagram</a>
+        </div>
+    </div>
+</body>
+</html>

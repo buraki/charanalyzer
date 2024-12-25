@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1db954; /* Light Blue Background */
+}
+
+.message-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #1db954;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+.message-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .message-container h1 {
+        font-size: 3rem;
+    }
+}
