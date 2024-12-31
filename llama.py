@@ -10,7 +10,7 @@ CORS(app)
 # Spotify API credentials
 SPOTIFY_CLIENT_ID = "b498dc1df97847318c5d40b7083f544f"
 SPOTIFY_CLIENT_SECRET = "bcb404e5b75c49af8d30b897a688d2c6"
-SPOTIFY_REDIRECT_URI = "http://localhost:5000/callback"
+SPOTIFY_REDIRECT_URI = "http://charanalyzer.com/callback"
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
 SPOTIFY_API_URL = "https://api.spotify.com/v1"
